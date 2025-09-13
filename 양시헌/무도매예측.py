@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 일별 도매가격 예측 파이프라인 (고구마)
-- 입력: 고구마도매_csv/*.csv  (컬럼: 일자, 시장, 단위, 품목, 등급, 평균가)
+- 입력: 무도매_csv/*.csv  (컬럼: 일자, 시장, 단위, 품목, 등급, 평균가)
 - 사용: 일자와 평균가만 추출하여 병합
 - 피처: 달력/주기/추세/다중 랙/EMA/롤링/차분/수익률 (+옵션 YoY)
 - 학습: 2020~2024  (★ 2022-05~09 다운웨이트)
@@ -357,7 +357,7 @@ def main():
     plt.axvline(EVAL_END_2025, color="gray", linestyle="--", linewidth=1.5)
     plt.text(EVAL_END_2025, ymax*0.98, "  2025-09-12 (실측 종료)", va="top", ha="left", fontsize=9, color="gray")
 
-    plt.title("고구마 도매 평균가: 실측(~09/12) + 미래 순차 예측(09/13~12/31)\n(학습: 2020~2024, 2022-05~09 다운웨이트 + EMA/추세 피처)")
+    plt.title("무 도매 평균가: 실측(~09/12) + 미래 순차 예측(09/13~12/31)\n(학습: 2020~2024, 2022-05~09 다운웨이트 + EMA/추세 피처)")
     plt.xlabel("날짜"); plt.ylabel("가격(원)")
     plt.grid(True, alpha=0.4); plt.legend(ncol=2); plt.tight_layout()
 
