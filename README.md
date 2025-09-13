@@ -54,7 +54,7 @@
 - **이동 평균/표준편차**: `rmean_X`, `rstd_X`  
 - **지수이동평균(EMA)**: `ema_7`, `ema_28`  
 - **차분·수익률**: `diff_1`, `diff_7`, `ret_1`, `ret_7`  
-- (옵션) **YoY 특성**: `yoy_diff`, `yoy_ratio`
+- (옵션) **YoY 특성**: `yoy_diff`, `yoy_ratio` (현재는 사용하지 않음)
 
 ---
 
